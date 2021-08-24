@@ -1,0 +1,3 @@
+main.o: main.cpp
+main-mt.o: main-mt.cpp
+main_omp.o: main_omp.cpp

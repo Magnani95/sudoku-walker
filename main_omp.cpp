@@ -80,11 +80,11 @@ int main()
 		//	matrix permutation-update
 		next_permutation(&matrix[0][0],&matrix[0][DIM]);
 
-		#pragma omp parallel for schedule(static) num_threads(THREAD)
+		//#pragma omp parallel for schedule(static) num_threads(THREAD)
 			for (size_t r = 1; r < DIM; r++) {
-			//mpz_set_ui(update_value,factorial(DIM));
-			//mpz_mul_ui(update_value,update_value,r);
-			//mpz_tdiv_r(update_value, i, update_value);
+			mpz_set_ui(update_value,factorial(DIM));
+			mpz_mul_ui(update_value,update_value,r);
+			mpz_tdiv_r(update_value, i, update_value);
 
 			if ( mpz_cmp_ui(update_value, 0) == 0){
 				next_permutation(&matrix[r][0],&matrix[r][DIM]);

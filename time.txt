@@ -1,0 +1,6 @@
+clean		-	372,78
+no-out		-	80,26
+no-out lite	-	77,03
+no-out l.O2	-	77,85
+lite out	-	77,81
+lite f(9)	-	82,44
